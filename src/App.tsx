@@ -1,14 +1,14 @@
-import Form from "./components/Form/Form"
-import List from "./components/Task/List"
+import TaskForm from "./components/Form/TaskForm"
+import TaskList from "./components/Task/TaskList"
 
 
 
-function App() {
+function App () {
   
 
   return (
-    <>
-      <div className="relative flex min-h-screen bg-gray-200 flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+  
+      <div className="relative flex min-h-screen  flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
         <h1 className="flex justify-center p-4 md:p-0 mx-px  md:mt-4 md:mb-3 text-center font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-800 to-pink-300">
           To Do List
         </h1>
@@ -20,14 +20,12 @@ function App() {
                 <figcaption className="ml-5 text-sm">—Randy Pausch</figcaption>
               </blockquote>
             </figure>
-            <Form />
-            <ul>
-              <List />
-            </ul>
+            <TaskForm />
+           <TaskList/>
           </div>
         </div>
       </div>
-    </>
+
   )
 }
 

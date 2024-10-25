@@ -1,7 +1,8 @@
+import React from 'react'
+
 import { FaRegTrashAlt, FaPencilAlt  } from "react-icons/fa";
 
-
-const List = () => {
+const TaskItem: React.FC = () => {
   return (
     <li>
     <div className="mt-7 ml-3 flex justify-between">
@@ -26,4 +27,4 @@ const List = () => {
   )
 }
 
-export default List
+export default TaskItem
