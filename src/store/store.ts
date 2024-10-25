@@ -7,7 +7,10 @@ const useStore = create<TodoStore>((set) => ({
     updateTask: (id: number) => set((state)=>({
         todo:state.todo.map((item)=>
         item.id === id ? {...item, completed: !item.completed}: item)
-    }))
+    })),
+    deleteTask: (id:number)=> set((state)=>({
+        todo:state.todo.filter(todo => todo.id !== id)
+    })),
   }))
 
 export default useStore;

@@ -8,5 +8,6 @@ export type Todo = {
     todo: Todo[];
     setTodo: (todo: Todo[]) => void;
     updateTask: (id: number)=> void;
+    deleteTask: (id: number)=> void;
   }
 

@@ -4,7 +4,7 @@ import { Todo } from '../../types/types';
 import useStore from "../../store/store";
 
 const TaskItem: React.FC <{task:Todo}>= ({task}) => {
-const {updateTask} = useStore()
+const {updateTask, deleteTask} = useStore()
 
   return (
     <li>
@@ -21,7 +21,7 @@ const {updateTask} = useStore()
       </label>
 
       <div className="flex gap-2">
-        <button  className=" text-purple-700 hover:text-white hover:bg-purple-600 p-1 px-1 rounded">
+        <button onClick={()=> deleteTask(task.id)} className=" text-purple-700 hover:text-white hover:bg-purple-600 p-1 px-1 rounded">
         <FaRegTrashAlt />
         </button>
         <button  className=" text-purple-700 hover:text-white hover:bg-purple-600 p-1 px-1 rounded">
