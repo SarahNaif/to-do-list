@@ -9,9 +9,12 @@ const TaskList: React.FC= () => {
     const fetchData = async ()=>{
       const res = await fetch("https://jsonplaceholder.typicode.com/todos")
       const data = await res.json();
-      setTodo(data.slice(0, 4))
+      setTodo(data.slice(0, 7))
+      
     }
-fetchData()
+    const localData:string|null = localStorage.getItem('todo-storage');
+    localData ? setTodo(JSON.parse(localData).state.todo) : fetchData()
+      
   },[])
 
 
