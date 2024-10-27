@@ -7,6 +7,7 @@ export type Todo = {
   export type  TodoStore = {
     todo: Todo[];
     setTodo: (todo: Todo[]) => void;
+    addTask: (title:string)=> void;
     updateTask: (id: number)=> void;
     deleteTask: (id: number)=> void;
   }
