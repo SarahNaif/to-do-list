@@ -38,7 +38,7 @@ const TaskForm: React.FC = () => {
         type="text"
         value={title}
         onChange={(e)=> {setTitle(e.target.value); setError(error ? '' : error)}}
-         className={`p-3 mt-2 mb-0.5 w-full rounded border-2 ${error ? 'border-red-500 bg-red-100/50 focus:border-red-500 ' : 'border-slate-100 bg-slate-100 focus:border-slate-400'}  focus:border-slate-600 focus:outline-none placeholder:italic`}
+         className={`p-3 mt-2 mb-0.5 w-full rounded border-2 ${error ? 'border-red-500 bg-red-100/50 focus:border-red-500 ' : 'border-slate-100 bg-slate-100 focus:border-slate-400'}   focus:outline-none placeholder:italic`}
         placeholder="Add Your Task..."
         />
         {error &&
