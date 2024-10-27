@@ -11,7 +11,7 @@ const TaskList: React.FC= () => {
     const fetchData = async ()=>{
       const res = await fetch("https://jsonplaceholder.typicode.com/todos")
       const data = await res.json();
-      setTodo(data.slice(0, 3))
+      setTodo(data.slice(0, 10))
       
     }
     const localData:string|null = localStorage.getItem('todo-storage');
@@ -34,10 +34,12 @@ const TaskList: React.FC= () => {
       className="py-1 px-2 bg-slate-100 text-slate-500 rounded-md ">All</button>
      
     </div>
-      <ul>
-        {filterdTask.map((task) => (
-          <TaskItem key={task.id} task={task} />
-        ))}
+      <ul className="mt-4">
+      {filterdTask.length === 0 ? (
+          <li className="text-center text-gray-500 my-8">No tasks found</li>
+        ) : (
+          filterdTask.map((task) => <TaskItem key={task.id} task={task} />)
+        )}
       </ul>
   
       

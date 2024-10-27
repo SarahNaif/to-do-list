@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import {  TodoStore } from '../types/types';
 import { persist } from 'zustand/middleware';
 
+
 const useStore = create<TodoStore>()(
     persist(
       (set) => ({
@@ -9,7 +10,7 @@ const useStore = create<TodoStore>()(
         setTodo: (todo) => set({ todo }),
         addTask: (title:string)=>set((state)=>({
             todo:[{
-                id: state.todo.length ? state.todo[state.todo.length - 1].id + 1 : 1,
+                id: Date.now(),
                 title,
                 completed: false
             },
