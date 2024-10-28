@@ -37,11 +37,11 @@ const TaskList: React.FC= () => {
     <>
     <div className="flex justify-end mt-7 mx-2 gap-2 text-xs">
       <button  onClick={() => setFilter("completed")} 
-      className="py-1 px-2 bg-slate-100 text-slate-500 rounded-md ">Done</button>
+      className="py-1 px-2 bg-slate-100 text-slate-500 rounded-md hover:bg-slate-200 active:bg-slate-300 ">Done</button>
        <button  onClick={() => setFilter("pending")} 
-      className="py-1 px-2 bg-slate-100 text-slate-500 rounded-md ">Pending</button>
+      className="py-1 px-2 bg-slate-100 text-slate-500 rounded-md hover:bg-slate-200 active:bg-slate-300">Pending</button>
        <button  onClick={() => setFilter("all")} 
-      className="py-1 px-2 bg-slate-100 text-slate-500 rounded-md ">All</button>
+      className="py-1 px-2 bg-slate-100 text-slate-500 rounded-md hover:bg-slate-200 active:bg-slate-300">All</button>
      
     </div>
       <ul className="mt-4">
