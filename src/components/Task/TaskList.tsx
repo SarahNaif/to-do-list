@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TaskItem from "./TaskItem";
 import useStore from "../../store/store";
-import { MdRefresh } from "react-icons/md";
 
 const TaskList: React.FC= () => {
   const {todo, setTodo} = useStore();
