@@ -10,7 +10,8 @@ This is a simple to-do list application built with <strong> ReactJS</strong> and
   
   * [Author](#author)
 
-
+## Demo 
+[Todo List preview](https://to-do-list-phif.vercel.app/)
 
 ## Configuration and Setup
 
@@ -40,6 +41,8 @@ $ npm run dev (to start the frontend)
 <br/>
 
 ## 📸 ScreenShots
+
+![Project preview](images/image-3.png)
 
 ##  Technologies used
 
