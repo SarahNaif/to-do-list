@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaRegTrashAlt, FaPencilAlt  } from "react-icons/fa";
+import { FaRegTrashAlt} from "react-icons/fa";
 import { Todo } from '../../types/types';
 import useStore from "../../store/store";
 
