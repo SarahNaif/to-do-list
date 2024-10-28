@@ -5,16 +5,27 @@ import useStore from "../../store/store";
 const TaskList: React.FC= () => {
   const {todo, setTodo} = useStore();
   const [filter, setFilter] = useState<string>("all");
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(()=> {
     const fetchData = async ()=>{
+      setLoading(true);
       const res = await fetch("https://jsonplaceholder.typicode.com/todos")
       const data = await res.json();
       setTodo(data.slice(0, 10))
-      
+      setLoading(false);
     }
+
+
     const localData:string|null = localStorage.getItem('todo-storage');
-    localData ? setTodo(JSON.parse(localData).state.todo) : fetchData()
+    
+
+    if (localData) {
+      setTodo(JSON.parse(localData).state.todo);
+      setLoading(false); 
+    } else {
+      fetchData();
+    }
       
   },[])
 
@@ -34,7 +45,9 @@ const TaskList: React.FC= () => {
      
     </div>
       <ul className="mt-4">
-      {filterdTask.length === 0 ? (
+      {loading ? (
+          <li className="text-center text-gray-500 my-8">Loading tasks...</li>
+        ) : filterdTask.length === 0 ? (
           <li className="text-center text-gray-500 my-8">No tasks found</li>
         ) : (
           filterdTask.map((task) => <TaskItem key={task.id} task={task} />)
