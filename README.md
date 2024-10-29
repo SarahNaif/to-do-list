@@ -1,6 +1,6 @@
 <H1 align ="center" > ToDo List  </h1>
 <h5  align ="center"> 
-This is a simple to-do list application built with <strong> ReactJS</strong> and <strong>TypeScript</strong>. It allows users to view a list of to-do items fetched from a public API, add new items, mark items as completed, and delete items. All new, completed </h5>
+This is a simple to-do list application built with <strong> ReactJS</strong> and <strong>TypeScript</strong>. It allows users to view a list of to-do items fetched from a public API, add new items, mark items as completed, and delete items. filter through all, completed and pending </h5>
 <br/>
 
   * [Configuration and Setup](#configuration-and-setup)
